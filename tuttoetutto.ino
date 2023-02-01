@@ -218,6 +218,6 @@ void readWaterlevel() {
   pinMode(ECHOPIN, INPUT);
   duration = pulseIn(echoPin, HIGH);
   cm = (duration / 2) / 29.1;  // Divide by 29.1 or multiply by 0.0343
-  int_8 precentage = (12-(float)cm / 12) * 100;
+  int8_t precentage = (12-(float)cm / 12) * 100;
   data.waterTank = precentage;
 }
