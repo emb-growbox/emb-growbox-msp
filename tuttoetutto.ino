@@ -17,6 +17,11 @@
 #define MOTOR_DIR 7
 #define MOTOR_STEP 8
 
+#define IN1 24
+#define IN2 25
+#define IN3 29
+#define IN4 30
+
 #define SOILMOIST 6
 
 const int stepsPerRevolution = 2048;
@@ -55,7 +60,7 @@ bool shouldFetchControl = false;
 bool startWatering = false;
 
 Timer controlTimer;
-Stepper myStepper(stepsPerRevolution, 24, 29, 25, 30);
+Stepper myStepper(stepsPerRevolution, IN1, IN3, IN2, IN4);
 void setup() {
   Serial.begin(9600);
   Serial1.begin(115200);
